@@ -10,7 +10,7 @@
     Python implementation
 ## Requirements
 * Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-* Terraform: https://learn.hashicorp.com/tutorials/terraform/install-cli
+* Terraform (Above version v0.12): https://learn.hashicorp.com/tutorials/terraform/install-cli
 * python 3.8
 * pipenv
 
@@ -44,6 +44,7 @@
 
         git clone https://github.com/maxibra/ionir_exercise.git
         cd ionir_exercise/infra_as_code
+        terraform init
         terraform plan
         terraform apply
 
