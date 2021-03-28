@@ -25,6 +25,8 @@
     * Description:
         * Contains modules with local implementations of base terraform's resources
 
+        ![image info](./images/Terraform_Base_structure.png)
+
 * __System modules__
     * Repository: https://github.com/maxibra/terraform_modules_system
     * Description:
@@ -34,13 +36,14 @@
     * To update any module create branch for it
     * Remove all modules except you are commit
     * Create release based on the branch
-        * NOTE: Please describe the Affected Module    
+        * NOTE: Please describe the Affected Module
+    * Merge the branch to master(main)
 
 ### Flow
 * Create Jenkins-gitops instance:
 
-        git clone
-        cd
+        git clone https://github.com/maxibra/ionir_exercise.git
+        cd ionir_exercise/infra_as_code
         terraform plan
         terraform apply
 
@@ -52,18 +55,19 @@
 ## __AWS_API__
 
 empty
+
 ## __TODO__ :
 |ToDo|Plan|Real|Status|
 | :- | :-: | :-: | :-: |
-| Planning| 2 hours |1.5 hours|Done|
-| README| 1.5 Hour | |InProgress|
-| Versioning tests | 1 Hour| 1 hour| Done
-| Create base modules Examples | 40 min | |InProgress
-| Create system modules | 1 hour|||
-| Create Task Module | 1 Hour | | - |
-| Create Jenkins GitOps| 3 Hours ||-|
-| Test | 2 hours ||-|
-| **TOTAL**| **2 Hours** |||
+| Planning| 2 hours |3 hours|Done|
+| README| 1.5 Hour |1.5 Hours |Done|
+| Versioning tests | 1.5 Hours| 2.5 Hours| Done|
+| Create base modules Examples | 40 min | 1.5 Hours |Done|
+| Create system modules | 1 Hour| 1 Hour|Done|
+| Create and Run Task Module | 1 Hour |3.5 Hours | Done |
+| Create Jenkins GitOps| 3 Hours ||Not Implemented|
+| Configuration and Test | 2 hours ||Not Implemented|
+| **TOTAL**| **12 Hours** |**13 Hours**||
 
 ## __TODO of out of the Scope of the Exercise__
 * _Infra as code_
@@ -72,5 +76,6 @@ empty
     * Users. Authorization
     * Improve Versioning.
     * System Repositories per Environment with tf_var
+    * Script to create README of modules from variables and outputs
 * _AWS API_
 
