@@ -5,19 +5,17 @@
 
     The task implements provisioning of system by Terraform.
 
-* AWS API
+* AWS. List Services
 
     Python implementation
 ## Requirements
 * Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 * Terraform (Above version v0.12): https://learn.hashicorp.com/tutorials/terraform/install-cli
-* python 3.8
-* pipenv
 
     Optional:
 
-    * Tool create token to work with MFA's Role in AWS: https://github.com/broamski/aws-mfa
-## __Infra As Code__
+    * Tool to create token to work with MFA's Role in AWS: https://github.com/broamski/aws-mfa
+# __Infra As Code__
 ### Structure
 * __Base modules__
 
@@ -53,10 +51,6 @@
 * The Jenkins will run the triggered environment update
 
 
-## __AWS_API__
-
-empty
-
 ## __TODO__ :
 |ToDo|Plan|Real|Status|
 | :- | :-: | :-: | :-: |
@@ -70,6 +64,7 @@ empty
 | Configuration and Test | 2 hours ||Not Implemented|
 | **TOTAL**| **12 Hours** |**13 Hours**||
 
+
 ## __TODO of out of the Scope of the Exercise__
 * _Infra as code_
     * Lock System for multi-agent system. Maybe DynamoDB
@@ -78,5 +73,44 @@ empty
     * Improve Versioning.
     * System Repositories per Environment with tf_var
     * Script to create README of modules from variables and outputs
-* _AWS API_
+
+
+# __AWS. List Services__
+## Description
+
+   Collect services details from AWS
+   Python implementation
+## Requirements
+* python 3.8 
+* pipenv
+* Optional:
+
+    * Tool to create token to work with MFA's Role in AWS: https://github.com/broamski/aws-mfa
+
+## Running
+* Change dir to your project's directory
+* Create token to run the tool without MFA
+
+        git clone https://github.com/broamski/aws-mfa
+        cd aws-mfa
+        ./aws-mfa --profile <profile_name> --long-term-suffix none --short-term-suffix test --device <ARN_MFA_Device_of_User> --assume-role <ARN_AWS_Role> --role-session-name run_wo_mfa
+
+* Install and run the tool to collect service's details
+
+        git clone https://github.com/maxibra/aws-list-services.git
+        pipenv install
+        pipenv shell
+        python setup.py install
+        ./aws-ls --help
+
+
+## __TODO__ :
+|ToDo|Status|
+| :- | :-: |
+| Code| Done|
+| Pagination| -|
+| Async| -|
+| API Throttling| -|
+
+
 
