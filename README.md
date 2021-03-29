@@ -76,6 +76,9 @@
 
 
 # __AWS. List Services__
+
+Repository: https://github.com/maxibra/aws-list-services
+
 ## Description
 
    Collect services details from AWS
